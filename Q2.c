@@ -129,10 +129,10 @@ void four(FlowTable *table)
     {
         for (int j = 0; j < table->flows[i].size; j++)
         {
-            if (table->flows[i].source == inet_addr("123.134.156.178"))
+            if (table->flows[i].client == inet_addr("123.134.156.178"))
             {
-                sum += table->flows[i].source_port;
-                sum += table->flows[i].destination_port;
+                sum += table->flows[i].client_port;
+                sum += table->flows[i].server_port;
             }
         }
     }
@@ -140,7 +140,7 @@ void four(FlowTable *table)
     // search for the flow with the sum of connection ports as ports in the flow
     for (int i = 0; i < table->size; i++)
     {
-        if (table->flows[i].source_port == sum || table->flows[i].destination_port == sum)
+        if (table->flows[i].client_port == sum || table->flows[i].server_port == sum)
         {
             // print all the packets in the flow
             for (int j = 0; j < table->flows[i].size; j++)
@@ -154,10 +154,10 @@ void four(FlowTable *table)
 /* I come from localhost, I requested a milkshake. Find my flavour. */
 void five(FlowTable *table)
 {
-    // search for the flow with source IP as localhost
+    // search for the flow with client IP as localhost
     for (int i = 0; i < table->size; i++)
     {
-        if (table->flows[i].source == inet_addr("127.0.0.1"))
+        if (table->flows[i].client == inet_addr("127.0.0.1"))
         {
             // print all the packets in the flow
             for (int j = 0; j < table->flows[i].size; j++)

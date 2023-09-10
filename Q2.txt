@@ -6,13 +6,13 @@ Q2:
     Packet Data: POST /username=secret HTTP/1.1
 Connection: Secret: I find a way, not a excuse.
 
-ɓU
+
     Checksum: 27424
 
 Q3:
     Packet Data: GET /your-password-is-somewhere-in--this-stream HTTP/1.1
 
-<
+sN
     Packet Data: GET / HTTP/1.1
 Origin: www.cs433.com
 User-Agent: PASSWORD-Berlin

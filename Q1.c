@@ -50,6 +50,7 @@ void packet_handler(FlowTable *table, unsigned char *packet, int packet_length)
     // If the TCP Flow is not present in the TCP Flow Table, add it to the TCP Flow Table
     if (flow == NULL)
     {
+        // Assuming the initial packet is from the client
         flow = add_flow_to_table(table, source_ip, destination_ip, source_port, destination_port);
     }
     // Add the packet data to the TCP Flow
@@ -65,7 +66,7 @@ void print_stats(FlowTable *table)
     printf("Statistics:\n");
     printf("  Total number of flows: %d\n", table->size);
     // doing a reverse dns lookup for 5 distinct IP address
-    printf("  5 Distinct Source IP addresses:\n");
+    printf("  5 Distinct Server IP addresses:\n");
     int count = 0;
     int addr[5];
     for (int i = 0; i < table->size; i++)
@@ -76,7 +77,7 @@ void print_stats(FlowTable *table)
         int found = 0;
         for (int j = 0; j < count; j++)
         {
-            if (addr[j] == table->flows[i].source)
+            if (addr[j] == table->flows[i].client)
             {
                 found = 1;
                 break;
@@ -84,11 +85,11 @@ void print_stats(FlowTable *table)
         }
         if (found == 1)
             continue;
-        struct hostent *host = gethostbyaddr(&table->flows[i].source, sizeof(table->flows[i].source), AF_INET);
+        struct hostent *host = gethostbyaddr(&table->flows[i].server, sizeof(table->flows[i].server), AF_INET);
         if (host != NULL)
         {
-            printf("    %s : %s\n", inet_ntoa(*(struct in_addr *)&table->flows[i].source), host->h_name);
-            addr[count] = table->flows[i].source;
+            printf("    %s : %s\n", inet_ntoa(*(struct in_addr *)&table->flows[i].server), host->h_name);
+            addr[count] = table->flows[i].server;
             count++;
         }
     }

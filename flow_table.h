@@ -11,8 +11,8 @@ typedef struct
 
 FlowTable *init_flow_table();
 void add_flow(FlowTable *table, Flow flow);
-Flow *add_flow_to_table(FlowTable *table, uint32_t source, uint32_t destination, uint16_t source_port, uint16_t destination_port);
-Flow *search_flow_in_table(FlowTable *table, uint32_t source, uint32_t destination, uint16_t source_port, uint16_t destination_port);
+Flow *add_flow_to_table(FlowTable *table, uint32_t client, uint32_t server, uint16_t client_port, uint16_t server_port);
+Flow *search_flow_in_table(FlowTable *table, uint32_t client, uint32_t server, uint16_t client_port, uint16_t server_port);
 void *print_flow_table(FlowTable *table);
 void free_flow_table(FlowTable *table);
 #endif

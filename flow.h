@@ -13,8 +13,8 @@ typedef struct
 // TCP FLow structure
 typedef struct
 {
-    uint32_t source, destination;
-    uint16_t source_port, destination_port;
+    uint32_t client, server;
+    uint16_t client_port, server_port;
     int size;
     int capacity;
     Packet *packets;
