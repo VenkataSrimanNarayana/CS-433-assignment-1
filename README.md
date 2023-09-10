@@ -223,19 +223,15 @@ Value of above cookies has the timestamp, domain level, random number, version
 **\_fbp**
 Used by Facebook to deliver a series of advertisement products such as real time bidding from third party advertisers. It expires in 1 day.
 
-References:
-a) https://support.google.com/analytics/answer/11397207?hl=en
-b) https://www.ssh.com/academy/ssh/protocol
-c) https://cookiedatabase.org/cookie/facebook/_fbp/
-d) https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol
-e) https://en.wikipedia.org/wiki/RTP_Control_Protocol
-f) https://www.ibm.com/docs/en/zos/2.4.0?topic=considerations-tls-v13-protocol-support
-g) https://www.binarytides.com/packet-sniffer-code-in-c-using-linux-sockets-bsd-part-2/
-h) https://www.opensourceforu.com/2015/03/a-guide-to-using-raw-sockets/
-i) https://man7.org/linux/man-pages/man7/packet.7.html
-j) https://man7.org/linux/man-pages/man7/raw.7.html
+References:  
+a) https://support.google.com/analytics/answer/11397207?hl=en  
+b) https://www.ssh.com/academy/ssh/protocol  
+c) https://cookiedatabase.org/cookie/facebook/_fbp/  
+d) https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol  
+e) https://en.wikipedia.org/wiki/RTP_Control_Protocol  
+f) https://www.ibm.com/docs/en/zos/2.4.0?topic=considerations-tls-v13-protocol-support  
+g) https://www.binarytides.com/packet-sniffer-code-in-c-using-linux-sockets-bsd-part-2/  
+h) https://www.opensourceforu.com/2015/03/a-guide-to-using-raw-sockets/  
+i) https://man7.org/linux/man-pages/man7/packet.7.html  
+j) https://man7.org/linux/man-pages/man7/raw.7.html  
 g) Slides
-
-```
-
-```
