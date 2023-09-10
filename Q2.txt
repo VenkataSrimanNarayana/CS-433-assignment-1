@@ -1,0 +1,32 @@
+Q1:
+    Packet Data: Flag: Romeo
+    Checksum: 53662
+
+Q2:
+    Packet Data: POST /username=secret HTTP/1.1
+Connection: Secret: I find a way, not a excuse.
+
+ɓU
+    Checksum: 27424
+
+Q3:
+    Packet Data: GET /your-password-is-somewhere-in--this-stream HTTP/1.1
+
+<
+    Packet Data: GET / HTTP/1.1
+Origin: www.cs433.com
+User-Agent: PASSWORD-Berlin
+
+
+
+Q4:
+    Sum of connection ports: 10987
+    Packet Data: The person you are looking for is Rabindranath Tagore
+
+Q5:
+    Packet Data: GET /milkshake HTTP/1.1
+Cookie: user:customer
+Referer: flavor- Strawberry
+
+
+
