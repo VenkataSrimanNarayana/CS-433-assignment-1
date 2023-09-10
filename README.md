@@ -23,18 +23,18 @@
 
 -   We can compile the binary for Q1 using the command
 
-console
-$ gcc Q1.c flow.c flow_table.c -o Q1
+````console
+$ gcc Q1.c flow.c flow_table.c -o Q1```
 
 -   Run the binary and redirect the output to a file:
 
-console
-$ sudo ./Q1 > Q1.txt
+```console
+$ sudo ./Q1 > Q1.txt```
 
 -   we can then run the `tcpreplay` command to simulate network traffic:
 
-console
-$ sudo tcpreplay -i eth0 --mbps=1 -v 2.pcap
+```console
+$ sudo tcpreplay -i eth0 --mbps=1 -v 2.pcap```
 
 -   Then quit the `Q1` binary using _ctrl + c_.
 
@@ -55,18 +55,19 @@ The code includes three files `flow_table.h`, `flow_table.h`, `flow.h`, `flow.c`
 
 -   Binary for the file can be compiled using:
 
-console
-$ gcc Q2.c flow.c flow_table.c -o Q2
+```console
+$ gcc Q2.c flow.c flow_table.c -o Q2```
 
 -   Run the binary and redirect the output using:
 
-console
-$ sudo ./Q2 > Q2.txt
+```console
+$ sudo ./Q2 > Q2.txt```
 
 -   Simulate the network traffic using `tcpreplay` command:
 
-console
+```console
 $ sudo tcpreplay -i eth0 --mbps=1 -v 1.pcap
+````
 
 -   quit the `Q2` binary using `ctrl + c`
 
@@ -104,8 +105,8 @@ $ sudo ./Q3
 
 1.
 
-i. Network Protocols
-a) SSH Protocol  
+i. Network Protocols  
+ a) SSH Protocol  
  b) TLSv1.3  
  c) OCSP  
  d) RTCP  
