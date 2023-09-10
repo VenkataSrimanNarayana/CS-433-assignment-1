@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.ejs": "html",
+        "tcp.h": "c",
+        "socket.h": "c",
+        "flow_table.h": "c"
+    }
+}
