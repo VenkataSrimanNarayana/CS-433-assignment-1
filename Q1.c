@@ -77,7 +77,7 @@ void print_stats(FlowTable *table)
         int found = 0;
         for (int j = 0; j < count; j++)
         {
-            if (addr[j] == table->flows[i].client)
+            if (addr[j] == table->flows[i].server)
             {
                 found = 1;
                 break;

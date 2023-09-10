@@ -36,7 +36,7 @@ $ sudo ./Q1 > Q1.txt
 -   we can then run the `tcpreplay` command to simulate network traffic:
 
 ```console
-$ sudo tcpreplay -i eth0 --mbps=1 -v 2.pcap
+$ sudo tcpreplay -i eth0 --mbps=1 -v q1_1.pcap
 ```
 
 -   Then quit the `Q1` binary using _ctrl + c_.
@@ -71,7 +71,7 @@ $ sudo ./Q2 > Q2.txt
 -   Simulate the network traffic using `tcpreplay` command:
 
 ```console
-$ sudo tcpreplay -i eth0 --mbps=1 -v 1.pcap
+$ sudo tcpreplay -i eth0 --mbps=1 -v q2_1.pcap
 ```
 
 -   quit the `Q2` binary using `ctrl + c`
