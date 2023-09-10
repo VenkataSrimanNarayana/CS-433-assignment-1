@@ -161,17 +161,17 @@ $$ RTT = 0.013487 \mu s $$
 
 HTTP/1.1, HTTP/2, and HTTP/3 are all protocols used for communication between clients (usually web browsers) and web servers.
 
-1. HTTP Semantics: All three versions are fundamentally based on the same HTTP semantics. They use methods like GET, POST, PUT, DELETE, etc., and they operate on the same HTTP status codes (e.g., 200 OK, 404 Not Found).
+-   HTTP Semantics: All three versions are fundamentally based on the same HTTP semantics. They use methods like GET, POST, PUT, DELETE, etc., and they operate on the same HTTP status codes (e.g., 200 OK, 404 Not Found).
 
-2. URI/URL: They all use Uniform Resource Identifiers (URI) or Uniform Resource Locators (URL) to identify and locate resources on the web.
+-   URI/URL: They all use Uniform Resource Identifiers (URI) or Uniform Resource Locators (URL) to identify and locate resources on the web.
 
-3. Request/Response: They all follow a request-response model where a client sends a request to a server, and the server responds with data, typically in the form of HTML, images, or other types of files.
+-   Request/Response: They all follow a request-response model where a client sends a request to a server, and the server responds with data, typically in the form of HTML, images, or other types of files.
 
-4. Status Codes: They share common HTTP status codes to indicate the outcome of a request, such as 200 for success, 404 for not found, and 500 for server errors.
+-   Status Codes: They share common HTTP status codes to indicate the outcome of a request, such as 200 for success, 404 for not found, and 500 for server errors.
 
-5. Headers: All three versions use HTTP headers to convey additional information about the request or response, such as content type, content length, and caching directives.
+-   Headers: All three versions use HTTP headers to convey additional information about the request or response, such as content type, content length, and caching directives.
 
-6. Statelessness: HTTP/1.1, HTTP/2, and HTTP/3 are all stateless protocols, meaning that each request from a client to a server is independent and does not rely on previous requests.
+-   Statelessness: HTTP/1.1, HTTP/2, and HTTP/3 are all stateless protocols, meaning that each request from a client to a server is independent and does not rely on previous requests.
 
 However, despite these similarities, there are significant differences between these protocols:
 
@@ -207,14 +207,15 @@ HTTP/1.1, HTTP/2, and HTTP/3 share some common elements and HTTP semantics, they
 -   The server utilizes this cookie to pinpoint the user's session and fetch the relevant session data.
 -   Typically, the PHPSESSID cookie's expiration is set to when the user closes their web browser.
 
-‘**ga’
+**‘\_ga’**  
 ‘\_ga’, the main cookie used by Google Analytics, enables a service to distinguish one visitor from another and lasts for 2 years. Any site that implements Google Analytics, including Google services, uses the ‘\_ga’ cookie. Each ‘\_ga’ cookie is unique to the specific property, so it cannot be used to track a given user or browser across unrelated websites.
-‘**ga\_<container-id>’
-Default expiration state 2 years. Used to persist session state.
 
+**‘\_ga\_\<container-id\>’**  
+Default expiration state 2 years. Used to persist session state.
 Value of above cookies has the timestamp, domain level, random number, version
 
-\_fbp → Used by Facebook to deliver a series of advertisement products such as real time bidding from third party advertisers. It expires in 1 day.
+**\_fbp**  
+Used by Facebook to deliver a series of advertisement products such as real time bidding from third party advertisers. It expires in 1 day.
 
 References:  
  a) https://support.google.com/analytics/answer/11397207?hl=en  
