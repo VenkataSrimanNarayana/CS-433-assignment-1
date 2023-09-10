@@ -23,18 +23,21 @@
 
 -   We can compile the binary for Q1 using the command
 
-````console
-$ gcc Q1.c flow.c flow_table.c -o Q1```
+```console
+$ gcc Q1.c flow.c flow_table.c -o Q1
+```
 
 -   Run the binary and redirect the output to a file:
 
 ```console
-$ sudo ./Q1 > Q1.txt```
+$ sudo ./Q1 > Q1.txt
+```
 
 -   we can then run the `tcpreplay` command to simulate network traffic:
 
 ```console
-$ sudo tcpreplay -i eth0 --mbps=1 -v 2.pcap```
+$ sudo tcpreplay -i eth0 --mbps=1 -v 2.pcap
+```
 
 -   Then quit the `Q1` binary using _ctrl + c_.
 
@@ -56,18 +59,20 @@ The code includes three files `flow_table.h`, `flow_table.h`, `flow.h`, `flow.c`
 -   Binary for the file can be compiled using:
 
 ```console
-$ gcc Q2.c flow.c flow_table.c -o Q2```
+$ gcc Q2.c flow.c flow_table.c -o Q2
+```
 
 -   Run the binary and redirect the output using:
 
 ```console
-$ sudo ./Q2 > Q2.txt```
+$ sudo ./Q2 > Q2.txt
+```
 
 -   Simulate the network traffic using `tcpreplay` command:
 
 ```console
 $ sudo tcpreplay -i eth0 --mbps=1 -v 1.pcap
-````
+```
 
 -   quit the `Q2` binary using `ctrl + c`
 
@@ -105,12 +110,12 @@ $ sudo ./Q3
 
 1.
 
-i. Network Protocols  
- a) SSH Protocol  
- b) TLSv1.3  
- c) OCSP  
- d) RTCP  
- e) STUN
+i. Network Protocols
+a) SSH Protocol
+b) TLSv1.3
+c) OCSP
+d) RTCP
+e) STUN
 
 ### SSH (SSH Connection with VM)
 
@@ -151,14 +156,14 @@ The server sends the packets with acknowledgement flag
 $$ RTT = TimeStamp(SYN/ACK) - TimeStamp(ACK) $$
 $$ RTT = 0.013487 \mu s $$
 
-2.  a) github.com  
-     i. http/2  
-    b) Netflix.com  
-     i. http/3, http/2  
-     ii. In Inspect  
-    c) Google.com  
-     i. http/2, http/3  
-     ii. sometimes http/1.1 (may when opened first time in incognito).
+2.  a) github.com
+    i. http/2
+    b) Netflix.com
+    i. http/3, http/2
+    ii. In Inspect
+    c) Google.com
+    i. http/2, http/3
+    ii. sometimes http/1.1 (may when opened first time in incognito).
 
 HTTP/1.1, HTTP/2, and HTTP/3 are all protocols used for communication between clients (usually web browsers) and web servers.
 
@@ -208,25 +213,29 @@ HTTP/1.1, HTTP/2, and HTTP/3 share some common elements and HTTP semantics, they
 -   The server utilizes this cookie to pinpoint the user's session and fetch the relevant session data.
 -   Typically, the PHPSESSID cookie's expiration is set to when the user closes their web browser.
 
-**‘\_ga’**  
+**‘\_ga’**
 ‘\_ga’, the main cookie used by Google Analytics, enables a service to distinguish one visitor from another and lasts for 2 years. Any site that implements Google Analytics, including Google services, uses the ‘\_ga’ cookie. Each ‘\_ga’ cookie is unique to the specific property, so it cannot be used to track a given user or browser across unrelated websites.
 
-**‘\_ga\_\<container-id\>’**  
+**‘\_ga\_\<container-id\>’**
 Default expiration state 2 years. Used to persist session state.
 Value of above cookies has the timestamp, domain level, random number, version
 
-**\_fbp**  
+**\_fbp**
 Used by Facebook to deliver a series of advertisement products such as real time bidding from third party advertisers. It expires in 1 day.
 
-References:  
- a) https://support.google.com/analytics/answer/11397207?hl=en  
- b) https://www.ssh.com/academy/ssh/protocol  
- c) https://cookiedatabase.org/cookie/facebook/_fbp/  
- d) https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol  
- e) https://en.wikipedia.org/wiki/RTP_Control_Protocol  
- f) https://www.ibm.com/docs/en/zos/2.4.0?topic=considerations-tls-v13-protocol-support  
- g) https://www.binarytides.com/packet-sniffer-code-in-c-using-linux-sockets-bsd-part-2/  
- h) https://www.opensourceforu.com/2015/03/a-guide-to-using-raw-sockets/  
- i) https://man7.org/linux/man-pages/man7/packet.7.html  
- j) https://man7.org/linux/man-pages/man7/raw.7.html  
- g) Slides
+References:
+a) https://support.google.com/analytics/answer/11397207?hl=en
+b) https://www.ssh.com/academy/ssh/protocol
+c) https://cookiedatabase.org/cookie/facebook/_fbp/
+d) https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol
+e) https://en.wikipedia.org/wiki/RTP_Control_Protocol
+f) https://www.ibm.com/docs/en/zos/2.4.0?topic=considerations-tls-v13-protocol-support
+g) https://www.binarytides.com/packet-sniffer-code-in-c-using-linux-sockets-bsd-part-2/
+h) https://www.opensourceforu.com/2015/03/a-guide-to-using-raw-sockets/
+i) https://man7.org/linux/man-pages/man7/packet.7.html
+j) https://man7.org/linux/man-pages/man7/raw.7.html
+g) Slides
+
+```
+
+```
